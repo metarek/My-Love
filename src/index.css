@@ -1,0 +1,218 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-cursive: "Great Vibes", cursive;
+  --font-display: "Cinzel", serif;
+  --font-serif: "Playfair Display", serif;
+  --font-bengali-sans: "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+  --font-bengali-serif: "Noto Serif Bengali", serif;
+  
+  --color-rose-pink-100: #fff0f3;
+  --color-rose-pink-200: #ffd6e0;
+  --color-rose-pink-300: #ffc2d1;
+  --color-rose-pink-400: #ff8fab;
+  --color-rose-pink-500: #ff4d6d;
+  --color-purple-romantic: #7b2cbf;
+  --color-purple-dark: #5a189a;
+}
+
+@layer utilities {
+  /* Glassmorphism Classes */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+  
+  .glass-card-pink {
+    background: rgba(255, 77, 109, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 143, 171, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(255, 77, 109, 0.15);
+  }
+
+  .text-glow-gold {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.6), 0 0 20px rgba(212, 175, 55, 0.4), 0 0 30px rgba(212, 175, 55, 0.2);
+  }
+
+  .text-glow-pink {
+    text-shadow: 0 0 10px rgba(255, 77, 109, 0.8), 0 0 20px rgba(255, 143, 171, 0.5), 0 0 30px rgba(255, 77, 109, 0.3);
+  }
+
+  .text-glow-white {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Custom Animations */
+
+/* 1. Star Twinkling */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 2. Slow Heart/Particle Floating and Swaying */
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) translateX(0) scale(0.5);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-20vh) translateX(var(--sway-x, 40px)) scale(var(--scale, 1));
+    opacity: 0;
+  }
+}
+
+/* 3. Falling Petals */
+@keyframes fallAndSway {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) translateX(var(--sway-x, 80px)) rotate(var(--rotate, 360deg));
+    opacity: 0;
+  }
+}
+
+/* 4. Fireflies floating */
+@keyframes fireflyDrift {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.1;
+  }
+  50% {
+    transform: translateY(-40px) translateX(30px);
+    opacity: 0.9;
+  }
+}
+
+/* 5. Heartbeat Glow Animation */
+@keyframes heartbeatGlow {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 77, 109, 0.6));
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(255, 77, 109, 0.9));
+  }
+}
+
+/* 6. Gate Heartbeat Gold Animation */
+@keyframes gateGlow {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+  }
+  50% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.95));
+  }
+}
+
+/* 7. Butterfly Wings Flapping */
+@keyframes flapLeft {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(70deg); }
+}
+@keyframes flapRight {
+  0%, 100% { transform: rotateY(0deg); }
+  50% { transform: rotateY(-70deg); }
+}
+
+/* 8. Butterfly Flight path */
+@keyframes flightPath {
+  0% {
+    transform: translate(0, 0) scale(0.6);
+  }
+  25% {
+    transform: translate(60px, -40px) scale(0.7);
+  }
+  50% {
+    transform: translate(120px, -10px) scale(0.8);
+  }
+  75% {
+    transform: translate(180px, -50px) scale(0.7);
+  }
+  100% {
+    transform: translate(240px, -20px) scale(0.6);
+  }
+}
+
+/* Aurora Shifting background gradient */
+@keyframes auroraMove {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Loading spin heart */
+@keyframes spinHeart {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(180deg); }
+  100% { transform: scale(1) rotate(360deg); }
+}
+
+.animate-twinkle {
+  animation: twinkle var(--duration, 3s) infinite ease-in-out;
+}
+
+.animate-float-up {
+  animation: floatUp var(--duration, 8s) infinite linear;
+}
+
+.animate-fall-sway {
+  animation: fallAndSway var(--duration, 10s) infinite linear;
+}
+
+.animate-firefly {
+  animation: fireflyDrift var(--duration, 6s) infinite ease-in-out;
+}
+
+.animate-heartbeat {
+  animation: heartbeatGlow var(--duration, 2.5s) infinite ease-in-out;
+}
+
+.animate-gate-glow {
+  animation: gateGlow var(--duration, 3s) infinite ease-in-out;
+}
+
+.animate-aurora {
+  background-size: 400% 400%;
+  animation: auroraMove 25s ease infinite;
+}
+
+.animate-spin-heart {
+  animation: spinHeart 2.5s infinite ease-in-out;
+}
+
+/* Hide scrollbar but keep scrolling functional */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
