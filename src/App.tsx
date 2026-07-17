@@ -37,7 +37,7 @@ const translations = {
   en: {
     title: "A Journey to My Heart",
     loadingSubtitle: "Tuning the melody of memories...",
-    welcome: "Welcome Somaiya ❤️",
+    welcome: "Welcome MAHIRU ❤️",
     gateQuote: "This is not just a website... \nThis is every heartbeat I couldn't explain.",
     openGateBtn: "Open the First Gate",
     p2Quote1: "Every day in class, \nI found another reason to smile.",
@@ -53,7 +53,7 @@ const translations = {
     finalTruthBtn: "The Final Truth",
     yesDoBtn: "Yes, I Do!",
     needTimeBtn: "💔 Need Time",
-    letterIntro: "Somaiya... \nI truly love you.",
+    letterIntro: "MAHIRU... \nI truly love you.",
     letterSub: "Maybe I never had the courage to say it in person...",
     letterBody: "But every heartbeat has always whispered your name. \nWill you accept my heart?",
     letterWithSoul: "With all my soul",
@@ -67,7 +67,7 @@ const translations = {
     withCareTarek: "With infinite care, Tarek",
     goBack: "Go Back",
     replayShort: "Replay",
-    designedBy: "Designed with infinite care for Somaiya",
+    designedBy: "Designed with infinite care for MAHIRU",
     monthYear: "July 2026",
     sentences: [
       "Could you give me just a little bit of your time? I'll take only a minute of yours to talk.",
@@ -86,7 +86,7 @@ const translations = {
   bn: {
     title: "আমার মনের একটি যাত্রা",
     loadingSubtitle: "স্মৃতির সুর মিলাচ্ছি...",
-    welcome: "স্বাগতম সুমাইয়া ❤️",
+    welcome: "স্বাগতম মাহিরু ❤️",
     gateQuote: "এটি কেবল একটি ওয়েবসাইট নয়... \nএটি আমার প্রতিটি হৃদস্পন্দন যা আমি কখনো প্রকাশ করতে পারিনি।",
     openGateBtn: "প্রথম দরজাটি খোলো",
     p2Quote1: "ক্লাসের প্রতিটি দিন, \nআমি হাসার আরও একটি নতুন কারণ খুঁজে পেতাম।",
@@ -102,7 +102,7 @@ const translations = {
     finalTruthBtn: "চূড়ান্ত সত্য",
     yesDoBtn: "হ্যাঁ, আমি রাজি!",
     needTimeBtn: "💔 কিছুটা সময় প্রয়োজন",
-    letterIntro: "সুমাইয়া... \nআমি তোমাকে সত্যি অনেক ভালোবাসি।",
+    letterIntro: "মাহিরু... \nআমি তোমাকে সত্যি অনেক ভালোবাসি।",
     letterSub: "হয়তো সামনাসামনি তা বলার সাহস কখনো হয়ে ওঠেনি...",
     letterBody: "কিন্তু আমার প্রতিটি হৃদস্পন্দন সবসময় কেবল তোমার নামই জপেছে। \nতুমি কি আমার এই মনকে আপন করে নেবে?",
     letterWithSoul: "আমার সমস্ত অনুভূতি দিয়ে",
@@ -116,7 +116,7 @@ const translations = {
     withCareTarek: "অসীম ভালোবাসা ও যত্নে, তারেক",
     goBack: "পেছনে যাও",
     replayShort: "পুনরায় শুরু",
-    designedBy: "সুমাইয়ার জন্য অসীম যত্নে তৈরি",
+    designedBy: "মাহিরুর জন্য অসীম যত্নে তৈরি",
     monthYear: "জুলাই ২০২৬",
     sentences: [
       "আমাকে কি একটু সময় দেওয়া যায়? তোমার সাথে কথা বলার জন্য আমি মাত্র ১ মিনিট সময় নেব।",
@@ -264,7 +264,7 @@ export default function App() {
         >
           <Heart size={18} className="text-rose-pink-500 fill-current animate-pulse" />
           <span className="font-display tracking-widest text-[11px] md:text-xs text-rose-pink-100 uppercase text-glow-pink font-semibold">
-            Tarek ❤️ Somaiya
+            Tarek ❤️ MAHIRU
           </span>
         </motion.div>
 
@@ -712,7 +712,7 @@ export default function App() {
                     </div>
                     {/* Glowing golden keyhole center */}
                     <span className={`${lang === "en" ? "font-cursive text-5xl md:text-6xl" : "font-bengali-serif text-4xl md:text-5xl"} text-white relative z-10 text-glow-pink`}>
-                      {lang === "en" ? "Somaiya" : "সুমাইয়া"}
+                      {lang === "en" ? "MAHIRU" : "মাহিরু"}
                     </span>
                   </motion.div>
                 )}
@@ -733,7 +733,7 @@ export default function App() {
                       </svg>
                     </div>
                     <span className={`${lang === "en" ? "font-cursive text-3xl md:text-4xl" : "font-bengali-serif text-2xl md:text-3xl"} text-rose-pink-100 relative z-10 uppercase tracking-widest block`}>
-                      {lang === "en" ? "Somaiya" : "সুমাইয়া"}
+                      {lang === "en" ? "MAHIRU" : "মাহিরু"}
                     </span>
                     <span className={`${lang === "en" ? "font-serif text-4xl md:text-5xl" : "font-bengali-serif text-3xl md:text-4xl"} font-bold text-white relative z-10 text-glow-pink uppercase tracking-wider mt-3`}>
                       {lang === "en" ? "I Love You" : "আমি তোমাকে ভালোবাসি"}
@@ -759,7 +759,7 @@ export default function App() {
                     <div className="relative z-10 text-center mb-6">
                       <Heart size={36} className="text-rose-pink-500 fill-current animate-bounce mx-auto mb-2" />
                       <h2 className={`${lang === "en" ? "font-cursive text-5xl" : "font-bengali-serif text-4xl"} text-rose-pink-300 text-glow-pink`}>
-                        {lang === "en" ? "Somaiya" : "সুমাইয়া"}
+                        {lang === "en" ? "MAHIRU" : "মাহিরু"}
                       </h2>
                     </div>
 
